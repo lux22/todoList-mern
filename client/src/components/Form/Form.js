@@ -14,6 +14,7 @@ import { useStyles } from "./form.style";
 import { taskPost, updateTask } from "../../store/redux/action/taskaction";
 
 const Form = ({ id, setCurrentId, history, taskStatus }) => {
+  console.log(history);
   const classes = useStyles();
   const dispatch = useDispatch();
   const [filepath, setFilePath] = useState(null);

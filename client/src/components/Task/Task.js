@@ -69,8 +69,9 @@ const TaskMain = ({
             <Form
               id={id}
               setCurrentId={setCurrentId}
-              {...restProps}
               taskStatus={taskStatus}
+              history={history}
+              {...restProps}
             />
           )}
         </Grid>
