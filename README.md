@@ -2,6 +2,8 @@
 
 A todo list MERN stack application with CRUD operations. User will be able to create task and also upload images for each task created.
 
+![alt text](https://github.com/lux22/todoList-mern/blob/main/client/tasklist.png?raw=true)
+
 ## Features
 
 - Switch task between completed and pending state.
