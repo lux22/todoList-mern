@@ -26,8 +26,18 @@ A todo list MERN stack application with CRUD operations. User will be able to cr
 
 Install the dependencies and devDependencies and start the server.
 
+**Client Side**
+
 ```sh
 cd client
+npm install
+npm start
+```
+
+**Server Side**
+
+```sh
+cd server
 npm install
 npm start
 ```
