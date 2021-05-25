@@ -10,11 +10,9 @@ export const getAllTask = async (req, res) => {
 };
 
 export const postTask = async (req, res) => {
-  const postdata = req.body;
-  const newdata = { ...postdata, selectedFile: res.selectedFile };
-  // const data = new taskList(postda);
+  const updateData = req.body;
   try {
-    const data = await taskList.create({ ...newdata });
+    const data = await taskList.create({ ...updateData });
     res.status(201).json(data);
   } catch (err) {
     res.status(404).json({ message: err.message });
@@ -23,12 +21,11 @@ export const postTask = async (req, res) => {
 
 export const updateTask = async (req, res) => {
   const { id: _id } = req.params;
-  const updateData = req.body;
-  const newdata = { ...updateData, selectedFile: res.selectedFile };
   try {
+    const updateData = req.body;
     const updateTask = await taskList.findByIdAndUpdate(
       _id,
-      { ...newdata, _id },
+      { ...updateData },
       { new: true }
     );
     res

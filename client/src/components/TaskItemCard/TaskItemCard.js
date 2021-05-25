@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTask, deleteTask } from "../../store/redux/action/taskaction";
+import {
+  updateTask,
+  deleteTask,
+  getTaskAction,
+} from "../../store/redux/action/taskaction";
 // import clsx from "clsx";
 import moment from "moment";
 import {
@@ -30,8 +34,10 @@ const TaskItemCard = ({
   createdAt,
   setStatusId,
   statusId,
+  setDelete,
   ...props
 }) => {
+  // console.log(selectedFile);
   const classes = useStyles();
 
   const [toggle, setToggle] = useState(false);
@@ -59,7 +65,7 @@ const TaskItemCard = ({
 
   const taskDelete = (id) => {
     dispatch(deleteTask(id));
-    setCurrentId(null);
+    setCurrentId(id);
   };
 
   const toggleStatus = (id) => {
@@ -71,8 +77,8 @@ const TaskItemCard = ({
         else return { ...item, completed: "pending" };
       });
     setToggle(!toggle);
-    setStatusId(id);
     dispatch(updateTask(id, ...data));
+    setStatusId(id);
   };
 
   return (

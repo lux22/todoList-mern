@@ -6,11 +6,9 @@ import { getTaskAction } from "../../../store/redux/action/taskaction";
 import TaskItemCard from "../../TaskItemCard/TaskItemCard";
 
 const TasklistPage = ({ setCurrentId, id, apiStatus, taskStatus }) => {
-  console.log(taskStatus);
   const dispatch = useDispatch();
   const { taskReducer } = useSelector((state) => state);
   const [statusId, setStatusId] = useState(null);
-
   const gridItem = React.useMemo(
     () =>
       taskReducer
@@ -39,16 +37,16 @@ const TasklistPage = ({ setCurrentId, id, apiStatus, taskStatus }) => {
   ));
 
   useEffect(() => {
-    if (taskReducer.length === 0 || id !== null || statusId !== null) {
+    if (taskReducer.length === 0 || id !== null) {
       setCurrentId(null);
       dispatch(getTaskAction());
     }
-  }, [id, dispatch, statusId, taskReducer.length, taskStatus, setCurrentId]);
+  }, [id, dispatch, taskReducer.length, setCurrentId]);
 
   return (
     <React.Fragment>
       <Grid container spacing={2}>
-        {taskReducer.length === 0 && apiStatus !== 0 ? loading : gridItem}
+        {apiStatus > 0 ? loading : gridItem}
       </Grid>
     </React.Fragment>
   );

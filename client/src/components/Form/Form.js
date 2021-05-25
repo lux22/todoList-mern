@@ -13,8 +13,7 @@ import { Add } from "@material-ui/icons";
 import { useStyles } from "./form.style";
 import { taskPost, updateTask } from "../../store/redux/action/taskaction";
 
-const Form = ({ id, setCurrentId, history, taskStatus }) => {
-  console.log(history);
+const Form = ({ id, history, setCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const [filepath, setFilePath] = useState(null);
@@ -31,7 +30,7 @@ const Form = ({ id, setCurrentId, history, taskStatus }) => {
 
   useEffect(() => {
     setNewTask(taskStore);
-  }, [taskStore]);
+  }, [taskStore, id, setCurrentId]);
 
   const convertToBase64 = (file) => {
     return new Promise((resolve, reject) => {
