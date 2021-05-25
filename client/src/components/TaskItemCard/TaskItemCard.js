@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  updateTask,
-  deleteTask,
-  getTaskAction,
-} from "../../store/redux/action/taskaction";
+import { updateTask, deleteTask } from "../../store/redux/action/taskaction";
 // import clsx from "clsx";
 import moment from "moment";
 import {
@@ -60,7 +56,7 @@ const TaskItemCard = ({
 
   const fnUpdateForm = (id) => {
     setCurrentId(id);
-    history.push("/addtask");
+    history.push("/");
   };
 
   const taskDelete = (id) => {

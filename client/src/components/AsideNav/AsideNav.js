@@ -3,7 +3,6 @@ import React from "react";
 import { List } from "@material-ui/core";
 import {
   FolderOpenOutlined,
-  EqualizerOutlined,
   CheckCircleOutline,
   MoreHorizOutlined,
 } from "@material-ui/icons";
@@ -13,8 +12,8 @@ import ListItemLink from "../ListItemLink/ListItemLink";
 const AsideNav = () => {
   return (
     <List component="nav" aria-label="main mailbox folders">
-      <ListItemLink Icon={EqualizerOutlined} primary="Overview" to="/" />
-      <ListItemLink Icon={FolderOpenOutlined} primary="Addtask" to="/addtask" />
+      {/* <ListItemLink Icon={EqualizerOutlined} primary="Overview" to="/" /> */}
+      <ListItemLink Icon={FolderOpenOutlined} primary="Addtask" to="/" />
       <ListItemLink
         Icon={MoreHorizOutlined}
         primary="In progress"

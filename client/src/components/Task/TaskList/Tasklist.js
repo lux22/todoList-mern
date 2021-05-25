@@ -16,7 +16,7 @@ const TasklistPage = ({ setCurrentId, id, apiStatus, taskStatus }) => {
           return item.completed === taskStatus;
         })
         .map((item) => (
-          <Grid item xs={4} key={item._id}>
+          <Grid item xs={12} sm={4} key={item._id}>
             <TaskItemCard
               {...item}
               setCurrentId={setCurrentId}
@@ -31,7 +31,7 @@ const TasklistPage = ({ setCurrentId, id, apiStatus, taskStatus }) => {
   );
 
   const loading = [1, 2, 3].map((item) => (
-    <Grid item xs={4} key={item}>
+    <Grid item xs={12} sm={4} key={item}>
       <SkeletonLoader />
     </Grid>
   ));

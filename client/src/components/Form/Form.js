@@ -101,7 +101,7 @@ const Form = ({ id, history, setCurrentId }) => {
       >
         <Box className={classes.formWrapper} display="flex" flexWrap="wrap">
           <Grid container spacing={1}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 required
                 name="title"
@@ -114,7 +114,7 @@ const Form = ({ id, history, setCurrentId }) => {
                 size="small"
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 required
                 name="assigned"
@@ -129,7 +129,8 @@ const Form = ({ id, history, setCurrentId }) => {
             </Grid>
             <Grid
               item
-              xs={6}
+              xs={12}
+              sm={6}
               classes={{
                 root: classes.gridRow,
               }}
@@ -148,7 +149,8 @@ const Form = ({ id, history, setCurrentId }) => {
             </Grid>
             <Grid
               item
-              xs={6}
+              xs={12}
+              sm={6}
               classes={{
                 root: classes.gridRow,
               }}
@@ -161,7 +163,7 @@ const Form = ({ id, history, setCurrentId }) => {
                 onChange={onChange}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={12}>
               <Box display="flex">
                 <TextareaAutosize
                   name="description"

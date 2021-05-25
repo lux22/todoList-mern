@@ -37,7 +37,7 @@ export const updateTask = (taskId, taskpost) => async (dispatch) => {
 export const deleteTask = (taskId) => async (dispatch) => {
   try {
     dispatch(apiCall());
-    const { data } = await api.taskDelete(taskId);
+    await api.taskDelete(taskId);
     dispatch({ type: action.UPDATE_TASK, payload: taskId });
   } catch (err) {
     dispatch(apiError());

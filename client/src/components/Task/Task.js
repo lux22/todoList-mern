@@ -31,7 +31,8 @@ const TaskMain = ({
       <Grid container>
         <Grid
           item
-          md={12}
+          xs={12}
+          sm={12}
           classes={{
             root: classes.rightHeader,
           }}
@@ -51,12 +52,13 @@ const TaskMain = ({
       <Grid container>
         <Grid
           item
-          md={12}
+          xs={12}
+          sm={12}
           classes={{
             root: classes.listbox_root,
           }}
         >
-          {pathname !== "/addtask" ? (
+          {pathname !== "/" ? (
             <TasklistPage
               id={id}
               setCurrentId={setCurrentId}

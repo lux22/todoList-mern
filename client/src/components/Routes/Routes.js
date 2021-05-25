@@ -15,10 +15,10 @@ const Routes = (props) => {
   return (
     <Suspense fallback="Loading indecator">
       <Switch>
-        <Route exact path="/" />
+        {/* <Route exact path="/" /> */}
         <Route
           exact
-          path="/addtask"
+          path="/"
           render={(props) => (
             <TaskMain {...props} id={id} setCurrentId={setCurrentId} />
           )}
