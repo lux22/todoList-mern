@@ -5,7 +5,6 @@ const TaskCompleted = ({ id, setCurrentId, ...restProps }) => {
     <Task
       id={id}
       setCurrentId={setCurrentId}
-      taskheading="Task in progress"
       status={"pending"}
       {...restProps}
       taskheading="Task completed"

@@ -21,7 +21,7 @@ const BottomNav = ({ id, setCurrentId }) => {
     } else {
       setValue(pathname);
     }
-  }, [pathname, value, id]);
+  }, [pathname, value, id, push]);
 
   return (
     <BottomNavigation
