@@ -17,9 +17,11 @@ export const getTaskAction = () => async (dispatch) => {
 export const taskPost = (taskpost) => async (dispatch) => {
   try {
     const { data } = await api.createTask(taskpost);
-    dispatch({ type: action.CREATE_TASk, payload: data });
+    dispatch({ type: action.CREATE_TASk, payload: data.data });
+    return { success: data.success };
   } catch (err) {
-    console.log(err);
+    dispatch(apiError());
+    return { error: err.message };
   }
 };
 
@@ -30,7 +32,7 @@ export const updateTask = (taskId, taskpost) => async (dispatch) => {
     dispatch({ type: action.UPDATE_TASK, payload: data });
   } catch (err) {
     dispatch(apiError());
-    console.log(err);
+    return { error: err.message };
   }
 };
 
@@ -41,6 +43,6 @@ export const deleteTask = (taskId) => async (dispatch) => {
     dispatch({ type: action.UPDATE_TASK, payload: taskId });
   } catch (err) {
     dispatch(apiError());
-    console.log(err);
+    return { error: err.message };
   }
 };

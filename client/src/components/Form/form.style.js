@@ -15,7 +15,7 @@ export const useStyles = makeStyles((theme) => ({
 
   paperOuter: {
     background: "#f5f8f8",
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     background: "#d9ecec59",
     borderRadius: "20px",
     maxWidth: "500px",

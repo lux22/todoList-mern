@@ -13,7 +13,7 @@ export const postTask = async (req, res) => {
   const updateData = req.body;
   try {
     const data = await taskList.create({ ...updateData });
-    res.status(201).json(data);
+    res.status(201).json({ success: "Task Created", data });
   } catch (err) {
     res.status(404).json({ message: err.message });
   }

@@ -33,7 +33,7 @@ const TaskItemCard = ({
   setDelete,
   ...props
 }) => {
-  // console.log(selectedFile);
+  // console.log(tags);
   const classes = useStyles();
 
   const [toggle, setToggle] = useState(false);

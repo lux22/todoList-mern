@@ -10,7 +10,11 @@ const Main = (props) => {
   const [id, setCurrentId] = useState(null);
   return (
     <React.Fragment>
-      <Container>
+      <Container
+        classes={{
+          root: classes.panel_right_root,
+        }}
+      >
         <Grid
           container
           spacing={0}
@@ -18,7 +22,7 @@ const Main = (props) => {
             root: classes.outerContainer,
           }}
         >
-          {isWidthUp("sm", props.width) && (
+          {isWidthUp("md", props.width) && (
             <Grid item xs={12} sm={3} md={3}>
               <Box borderRight={1} className={`${classes.asideWrapper}`}>
                 <Paper
@@ -42,7 +46,7 @@ const Main = (props) => {
               </Box>
             </Grid>
           )}
-          <Grid item xs={12} sm={9} md={9}>
+          <Grid item xs={12} sm={12} md={9} lg={9}>
             <Paper
               className={`${classes.paperRight}`}
               elevation={0}
@@ -53,7 +57,9 @@ const Main = (props) => {
           </Grid>
         </Grid>
       </Container>
-      {isWidthDown("sm", props.width) && <BottomNav />}
+      {isWidthDown("sm", props.width) && (
+        <BottomNav id={id} setCurrentId={setCurrentId} />
+      )}
     </React.Fragment>
   );
 };
