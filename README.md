@@ -6,7 +6,7 @@ A todo list MERN stack application with CRUD operations. User will be able to cr
 
 # Mobile View
 
-<table>
+<table border="0">
   <tr>
     <td><img src="client/scr-1.png?raw=true" width=270 height=480></td>
     <td><img src="client/scr-2.png?raw=true" width=270 height=480></td>
