@@ -16,6 +16,6 @@ const taskSchema = mongoose.Schema({
   },
 });
 
-const taskList = mongoose.model("taskList", taskSchema);
+const taskList = mongoose.model("tasklist", taskSchema);
 
 export default taskList;

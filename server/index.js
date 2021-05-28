@@ -10,8 +10,9 @@ app.use(cors());
 
 app.use("/task", listRouter);
 
-const CONNECT_URL =
-  "mongodb+srv://todolist:X19kTW2X47bfOAAO@mongocluster.hqcdo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const CONNECT_URL_ =
+//   "mongodb+srv://todolist:X19kTW2X47bfOAAO@mongocluster.hqcdo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const CONNECT_URL = "mongodb://localhost/todolist";
 const PORT = process.env.PORT || 5000;
 
 const connectMongoDb = async () => {
