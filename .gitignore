@@ -4,6 +4,7 @@
 node_modules/
 server/node_modules
 client/node_modules
+client/yarn.lock
 .vscode/
 /.pnp
 .pnp.js
