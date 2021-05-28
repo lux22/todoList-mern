@@ -4,6 +4,16 @@ A todo list MERN stack application with CRUD operations. User will be able to cr
 
 ![alt text](https://github.com/lux22/todoList-mern/blob/main/client/tasklist.png?raw=true)
 
+# Mobile View
+
+<table>
+  <tr>
+    <td><img src="https://github.com/lux22/todoList-mern/blob/main/client/scr-1.png?raw=true" width=270 height=480></td>
+    <td><img src="https://github.com/lux22/todoList-mern/blob/main/client/scr-2.png?raw=true" width=270 height=480></td>
+    <td><img src="https://github.com/lux22/todoList-mern/blob/main/client/scr-3.png?raw=true" width=270 height=480></td>
+  </tr>
+ </table>
+
 ## Features
 
 - Switch task between completed and pending state.
